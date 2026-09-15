@@ -1,0 +1,52 @@
+void main() {
+  int x = 5;
+  int b = 10;
+  print("x = $x");
+  double y = 1.1;
+  print("y = $y");
+  print("x + y = ${x + y}");
+  String m = "my name is moe";
+  print (m);
+  bool t=true;
+  bool f=false;
+  print ("$t  $f");
+print (b=b-x);
+  print (x=b+x);
+int age = 18;
+  if(age>=18)
+    print("success");
+    else
+      print("error");
+
+  double moe = 70;
+  double jack = 40;
+  double hala = 75;
+  double lona = 65;
+  double mark = 80;
+  
+  if(moe>=60 && mark<70){
+print("moe success");
+  }
+else if(hala>=mark){
+print("hala success"); 
+}
+else  if(jack>=mark){
+print("jack success"); 
+}
+else  if(lona>=mark){
+print("lona success");  
+}
+  else{
+   print("f"); 
+  } 
+    bool session=true;
+ if (!session){
+   print("login");
+ } else {
+print("homepage");   
+ }
+  print(!session ? "login" : "homepage");
+ 
+
+}
+
