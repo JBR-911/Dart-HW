@@ -1,0 +1,12 @@
+void main() async{
+  await for(final progress in downloadProgress()){
+  print ("Download:$progress%");
+}
+  print ("Download Completed Successfully!");
+}
+Stream <String> downloadProgress ()async* {
+  for (int progress =0;progress<= 100;progress+=20){
+  await Future.delayed(Duration(seconds: 1));
+ yield ("$progress");
+  }
+}
