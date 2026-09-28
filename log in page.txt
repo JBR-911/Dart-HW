@@ -1,0 +1,182 @@
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const Signin());
+}
+
+class Signin extends StatelessWidget {
+  const Signin({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 252, 252, 252),
+        body: Center(
+          child: Column(
+            children: [
+              Spacer(),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 100,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    border: Border.all(),
+                    color: const Color.fromARGB(255, 138, 181, 221),
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  child: Icon(
+                    Icons.person,
+                    size: 50,
+                    color: const Color.fromARGB(255, 26, 98, 254),
+                  ),
+                ),
+              ),
+Spacer(),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Welcome Back',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Applying for a new account is easy.',
+                  style: TextStyle(fontSize: 16),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Expanded(
+                        child: MaterialButton(
+                          onPressed: () {},
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadiusGeometry.circular(10),
+                            side: BorderSide(color: Colors.black),
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(Icons.email),
+                              Text(
+                                'Continue with email',
+                                style: TextStyle(color: Colors.black),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Expanded(
+                        child: MaterialButton(
+                          onPressed: () {},
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadiusGeometry.circular(10),
+                            side: BorderSide(color: Colors.black),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.facebook),
+                              Text(
+                                'Continue with Facebook',
+                                style: TextStyle(color: Colors.black),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [ 
+                    SizedBox( 
+                      width: 250,      
+                   child: Divider (),
+                    ),
+                    Text('or'),
+                    SizedBox(
+                      width: 250,
+                      child: Divider(),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child :SizedBox(
+                  width: 500,
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.email),
+                    hintText: 'Enter your Email',
+                  
+                  ),
+                ),
+              ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child :SizedBox(
+                  width: 500,
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.password),
+                    hintText: 'Enter your password',
+                  ),
+                ),
+              ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child:SizedBox(
+                child: MaterialButton(
+                  onPressed: () {},
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadiusGeometry.circular(10),
+                  ),
+                  minWidth: 500,
+                  color: const Color.fromARGB(255, 18, 67, 229),
+                  child: Text('login'),
+                ),
+              ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Don't have an account?"),
+                  TextButton(onPressed: () {}, child: Text('Sign up')),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(onPressed: () {}, child: Text('Forgot password?')),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
