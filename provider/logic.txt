@@ -1,0 +1,23 @@
+import 'package:flutter/material.dart';
+
+class TodoLogic extends ChangeNotifier {
+  List<String> todo = [];
+  List<bool> todocheck = [];
+
+  void buttonPressed(String text) {
+    todo.add(text);
+    todocheck.add(false);
+    notifyListeners();
+  }
+
+  void delete(int index) {
+    todo.removeAt(index);
+    notifyListeners();
+  }
+
+  void reverse(int index) {
+    todocheck[index] = !todocheck[index];
+    notifyListeners();
+  }
+}
+
